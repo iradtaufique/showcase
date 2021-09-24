@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure--od_boviyo25j&wwpnxk+t@=)hl5^w3p3e3q1+8-qi_w)pix4d
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['maliki.pythonanywhere.com']
+ALLOWED_HOSTS = ['maliki.pythonanywhere.com', 'localhost']
 
 
 # Application definition

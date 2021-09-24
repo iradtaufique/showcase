@@ -1,195 +1,550 @@
-
-<!doctype html>
-<html lang="en" class="h-100">
+{% extends 'base.html' %}
 {% load static %}
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.83.1">
-    <title>Sticky Footer Navbar Template · Bootstrap v5.0</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
 
 
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
+{% block headerContent %}
+    {% load static %}
+<header class="ltn__header-area ltn__header-5 ltn__header-transparent gradient-color-4---">
+        <!-- ltn__header-top-area start -->
+        <div class="ltn__header-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="ltn__top-bar-menu">
+                            <ul>
+                                <li><a href=""><i class="icon-placeholder"></i> KG 134 NY</a></li>
+                                <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i>maliki@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="top-bar-right text-right">
+                            <div class="ltn__top-bar-menu">
+                                <ul>
 
+                                    <li>
+                                        <!-- ltn__social-media -->
+                                        <div class="ltn__social-media">
+                                            <ul>
+                                                <li><a href="#" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-      <!-- Custom styles for this template -->
-    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
-
-
-    <!-- Custom styles for this template -->
-{#    <link href="sticky-footer-navbar.css" rel="stylesheet">#}
-  </head>
-  <body class="d-flex flex-column h-100" style="background-color: #112023">
-
-<header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><b>M-H</b></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#category1">Category1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#category2">Category2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#category3" tabindex="-1" aria-disabled="true">Category3</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#category4" tabindex="-1" aria-disabled="true">Category4</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-    {% include 'carousel/carousel.html' %}
-
-
-
-     <!-- Begin page content -->
-     <main class="flex-shrink-0">
-        <div class="container marketing">
-            <div class="row"><!-- the first row-->
-              <div class="col-lg-6"><!-- the first column in first row-->
-                <div class="card card-body">
-                   <h5 class="text-center text-success mb-4" id="category1">Category1</h5>
-                   <div class="row justify-content-center">
-                      {% for foo in datas %}
-                          <div class="col-lg-4">
-                             <div class="card">
-                              <a href="{% url 'product_details' foo.id %}">
-                                  <img src="{{ foo.product_image.url }}" alt="" width="100%" height="200" class="">
-                              </a>
-                              </div>
-                            <h5>Heading</h5>
-                            <p><a class="btn btn-secondary" href="{% url 'product_details' foo.id %}">View details &raquo;</a></p>
-                          </div>
-                      {% endfor %}
-                   </div>
+                                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div><!-- end of the first column in the first row-->
-
-              <div class="col-lg-6"><!-- the second column in first row-->
-                <div class="card card-body">
-                   <h5 class="text-center text-success mb-4" id="category2">Category2</h5>
-                   <div class="row justify-content-center">
-                      {% for foo in datas %}
-                          <div class="col-lg-4">
-                             <div class="card">
-                              <a href="{% url 'product_details' foo.id %}">
-                                  <img src="{{ foo.product_image.url }}" alt="" width="100%" height="200" class="">
-                              </a>
-                              </div>
-                            <h5>Heading</h5>
-                            <p><a class="btn btn-secondary" href="{% url 'product_details' foo.id %}">View details &raquo;</a></p>
-                          </div>
-                      {% endfor %}
-                   </div>
-                </div>
-              </div><!-- end of the second column in the first row-->
-
-            </div><!-- end the first row -->
-
-        <!---------------------------------------- End of the first row-------------------------------------------------------->
-
-        <!---------------------------------------- Second row ----------------------------------------------------------------->
-
-            <div class="row mt-5"><!-- the second row-->
-              <div class="col-lg-6"><!-- the first column in first row-->
-                <div class="card card-body">
-                   <h5 class="text-center text-success mb-4" id="category3">Category3</h5>
-                   <div class="row justify-content-center">
-                      {% for foo in datas %}
-                          <div class="col-lg-4">
-                             <div class="card">
-                              <a href="{% url 'product_details' foo.id %}">
-                                  <img src="{{ foo.product_image.url }}" alt="" width="100%" height="200" class="">
-                              </a>
-                              </div>
-                            <h5>Heading</h5>
-                            <p><a class="btn btn-secondary" href="{% url 'product_details' foo.id %}">View details &raquo;</a></p>
-                          </div>
-                      {% endfor %}
-                   </div>
-                </div>
-              </div><!-- end of the first column in the first row-->
-
-              <div class="col-lg-6"><!-- the second column in first row-->
-                <div class="card card-body">
-                   <h5 class="text-center text-success mb-4" id="category4">Category4</h5>
-                   <div class="row justify-content-center">
-                      {% for foo in datas %}
-                          <div class="col-lg-4">
-                             <div class="card">
-                              <a href="{% url 'product_details' foo.id %}">
-                                  <img src="{{ foo.product_image.url }}" alt="" width="100%" height="200" class="">
-                              </a>
-                              </div>
-                            <h5>Heading</h5>
-                            <p><a class="btn btn-secondary" href="{% url 'product_details' foo.id %}">View details &raquo;</a></p>
-                          </div>
-                      {% endfor %}
-                   </div>
-                </div>
-              </div><!-- end of the second column in the first row-->
-
-            </div><!-- end the first row -->
-
-        </div><!-- /.container -->
-     </main>
-
-
-    <footer class="footer mt-5 py-3 bg-success">
-      <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 text-center">
-                <h5 class="text-white ">Contact</h5>
-                <i class="fa fa-phone text-white" style="font-size:20px"></i><span class="text-white"> +0898744342</span> <br>
-                <i class="fa fa-google text-white" style="font-size:20px"></i><span class="text-white"> malikihouse@gmail.com</span> </a><br>
-                <i class="fa fa-twitter text-white" style="font-size:20px"></i> <span class="text-white"> @malikihouse</span></a><br>
-                <i class="fa fa-instagram text-white" style="font-size:20px"></i> <span class="text-white"> @malikihouse</span> </a><br>
-                <p class="text-center text-white mt-5">Maliki House of Clothing</p>
             </div>
         </div>
-      </div>
-    </footer>
+        <!-- ltn__header-top-area end -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
-</html>
+        <!-- ltn__header-middle-area start -->
+        <div class="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white plr--9---">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="site-logo-wrap">
+                            <div class="site-logo">
+{#                                <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>#}
+                                <h3>M H LOGO</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col header-menu-column menu-color-white---">
+                        <div class="header-menu d-none d-xl-block">
+                            <nav>
+                                <div class="ltn__main-menu">
+                                    <ul>
+                                        <li class="menu-icon"><a href="/">Home</a></li>
+                                        <li class="menu-icon"><a href="#">About</a>
+                                            <ul>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="service.html">Services</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="menu-icon"><a href="#">Categories</a>
+                                            <ul class="mega-menu">
+                                                <li><a href="#">Category 1</a>
+                                                    <ul>
+                                                        <li><a href="portfolio.html">Gallery</a></li>
+                                                        <li><a href="portfolio.html">Gallery</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Category 2</a>
+                                                    <ul>
+                                                        <li><a href="history.html">History</a></li>
+                                                        <li><a href="contact.html">Appointment</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Category3</a>
+                                                    <ul>
+                                                        <li><a href="shop.html">Shop</a></li>
+                                                        <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Category4</a>
+                                                    <ul>
+                                                        <li><a href="shop.html">Shop</a></li>
+                                                        <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="ltn__header-options ltn__header-options-2">
+                        <!-- header-search-1 -->
+{#                        <div class="header-search-wrap">#}
+{#                            <div class="header-search-1">#}
+{#                                <div class="search-icon">#}
+{#                                    <i class="icon-search for-search-show"></i>#}
+{#                                    <i class="icon-cancel  for-search-close"></i>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="header-search-1-form">#}
+{#                                <form id="#" method="get"  action="#">#}
+{#                                    <input type="text" name="search" value="" placeholder="Search here..."/>#}
+{#                                    <button type="submit">#}
+{#                                        <span><i class="fa fa-search"></i></span>#}
+{#                                    </button>#}
+{#                                </form>#}
+{#                            </div>#}
+{#                        </div>#}
+                        <!-- user-menu -->
+{#                        <div class="ltn__drop-menu user-menu">#}
+{#                            <ul>#}
+{#                                <li>#}
+{#                                    <a href="#"><i class="fas fa-user"></i></a>#}
+{#                                    <ul>#}
+{#                                        <li><a href="login.html">Sign in</a></li>#}
+{#                                        <li><a href="register.html">Register</a></li>#}
+{#                                        <li><a href="account.html">My Account</a></li>#}
+{#                                    </ul>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+
+                        <!-- Mobile Menu Button -->
+                        <div class="mobile-menu-toggle d-xl-none">
+                            <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
+                                <svg viewBox="0 0 800 600">
+                                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                                    <path d="M300,320 L540,320" id="middle"></path>
+                                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ltn__header-middle-area end -->
+    </header>
+{% endblock %}
+
+{% block sliderContent %}
+    <!-- SLIDER AREA START (slider-3) -->
+    <div class="ltn__slider-area ltn__slider-3  section-bg-1">
+        <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
+            <!-- ltn__slide-item -->
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3">
+                <div class="ltn__slide-item-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                                <div class="slide-item-info">
+                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                        <div class="slide-video mb-50 d-none">
+                                            <a class="ltn__video-icon-2 ltn__video-icon-2-border" href="https://www.youtube.com/embed/tlThdr3O5Qo" data-rel="lightcase:myCollection">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <h6 class="slide-sub-title animated"> 100% genuine Products</h6>
+                                        <h1 class="slide-title animated ">If you Dream it <br> You can Have it</h1>
+                                        <div class="slide-brief animated">
+                                            <p>Hands Made Products At affordable Price</p>
+                                        </div>
+                                        <div class="btn-wrapper animated">
+                                            <a href="#products" class="theme-btn-1 btn btn-effect-1 text-uppercase">Explore Products</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide-item-img">
+                                    <img src="{% static 'image/jumbo1.jpg' %}" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ltn__slide-item -->
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3">
+                <div class="ltn__slide-item-inner  text-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                                <div class="slide-item-info">
+                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                        <h6 class="slide-sub-title animated"> 100% genuine Products</h6>
+{#                                        <h1 class="slide-title animated ">Our Garden's  Most <br>   Favorite Food</h1>#}
+                                        <div class="slide-brief animated">
+                                            <p>M-H (Malik House of Cloth and Craft) is here to make your dream come true, we help to build your interial and exterial design of your house at affordable price. </p>
+                                        </div>
+                                        <div class="btn-wrapper animated">
+                                            <a href="#products" class="theme-btn-1 btn btn-effect-1 text-uppercase">Explore Products</a>
+{#                                            <a href="about.html" class="btn btn-transparent btn-effect-3 text-uppercase">LEARN MORE</a>#}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide-item-img slide-img-left">
+                                    <img src="{% static 'image/jumbo.jpg' %}" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+    </div>
+    <!-- SLIDER AREA END -->
+{% endblock %}
+
+{% block content %}
+    <div class="ltn__product-tab-area ltn__product-gutter pt-85 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2 text-center">
+                        <h1 class="section-title" id="products">Our Products</h1>
+                    </div>
+                    <div class="ltn__tab-menu ltn__tab-menu-2 ltn__tab-menu-top-right-- text-uppercase text-center">
+                        <div class="nav">
+                            <a class="active show" data-toggle="tab" href="#category1">Category1</a>
+                            <a data-toggle="tab" href="#category2" class="">Category2</a>
+                            <a data-toggle="tab" href="#category3" class="">Category3</a>
+                            <a data-toggle="tab" href="#category4" class="">Category4</a>
+                            <a data-toggle="tab" href="#category5" class="">Category5</a>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="category1">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <!-- Category 1 started here  -->
+                                  {% for categor1 in category1 %}
+                                      <div class="col-xl-3 col-sm-6 col-6">
+                                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                                            <div class="product-img">
+                                                {% for image in categor1.product_image.all %}
+                                                    {% if image.is_featured %}
+                                                        <a href="{% url 'product_details' categor1.id %}"><img src="{{ image.image.url }}" alt="#"></a>
+                                                    {% endif %} 
+
+                                                {% endfor %}
+
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'product_details' categor1.id %}" title="Quick View">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <h2 class="product-title"><a href="{% url 'product_details' categor1.id %}">{{ categor1.product_name }}</a></h2>
+{#                                                <div class="product-price">#}
+{#                                                    <span>$149.00</span>#}
+{#                                                    <del>$162.00</del>#}
+{#                                                </div>#}
+                                            </div>
+                                        </div>
+                                    </div>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <!--- category1 ended here-->
+
+                        <!--- category2 started here-->
+                        <div class="tab-pane fade" id="category2">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <!-- Category 1 started here  -->
+                                  {% for categor2 in category2 %}
+                                      <div class="col-xl-3 col-sm-6 col-6">
+                                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                                            <div class="product-img">
+                                                {% for image in categor2.product_image.all %}
+                                                    {% if image.is_featured %}
+                                                        <a href="{% url 'product_details' categor2.id %}"><img src="{{ image.image.url }}" alt="#"></a>
+                                                    {% endif %}
+                                                {% endfor %}
+
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'product_details' categor2.id %}" title="Quick View">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <h2 class="product-title"><a href="{% url 'product_details' categor2.id %}">{{ categor2.product_name }}</a></h2>
+{#                                                <div class="product-price">#}
+{#                                                    <span>$149.00</span>#}
+{#                                                    <del>$162.00</del>#}
+{#                                                </div>#}
+                                            </div>
+                                        </div>
+                                    </div>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <!--- end of category2--->
+
+
+                        <!--- start of category3--->
+                        <div class="tab-pane fade" id="category3">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <!-- Category 1 started here  -->
+                                  {% for categor3 in category3 %}
+                                      <div class="col-xl-3 col-sm-6 col-6">
+                                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                                            <div class="product-img">
+                                                {% for image in categor3.product_image.all %}
+                                                    {% if image.is_featured %}
+                                                        <a href="{% url 'product_details' categor3.id %}"><img src="{{ image.image.url }}" alt="#"></a>
+                                                    {% endif %}
+
+                                                {% endfor %}
+
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'product_details' categor3.id %}" title="Quick View">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <h2 class="product-title"><a href="{% url 'product_details' categor3.id %}">{{ categor3.product_name }}</a></h2>
+{#                                                <div class="product-price">#}
+{#                                                    <span>$149.00</span>#}
+{#                                                    <del>$162.00</del>#}
+{#                                                </div>#}
+                                            </div>
+                                        </div>
+                                    </div>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of category3--->
+
+                        <!-- start of category4--->
+                        <div class="tab-pane fade" id="category4">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <!-- Category 1 started here  -->
+                                  {% for categor4 in category4 %}
+                                      <div class="col-xl-3 col-sm-6 col-6">
+                                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                                            <div class="product-img">
+                                                {% for image in categor4.product_image.all %}
+                                                    {% if image.is_featured %}
+                                                        <a href="{% url 'product_details' categor4.id %}"><img src="{{ image.image.url }}" alt="#"></a>
+                                                    {% endif %}
+
+                                                {% endfor %}
+
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'product_details' categor4.id %}" title="Quick View">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <h2 class="product-title"><a href="{% url 'product_details' categor4.id %}">{{ categor4.product_name }}</a></h2>
+{#                                                <div class="product-price">#}
+{#                                                    <span>$149.00</span>#}
+{#                                                    <del>$162.00</del>#}
+{#                                                </div>#}
+                                            </div>
+                                        </div>
+                                    </div>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <!--- end of category4--->
+
+                        <!--- start of category5 --->
+                        <div class="tab-pane fade" id="category5">
+                            <div class="ltn__product-tab-content-inner">
+                                <div class="row">
+                                    <!-- Category 1 started here  -->
+                                  {% for categor5 in category5 %}
+                                      <div class="col-xl-3 col-sm-6 col-6">
+                                        <div class="ltn__product-item ltn__product-item-3 text-center">
+                                            <div class="product-img">
+                                                {% for image in categor5.product_image.all %}
+                                                    {% if image.is_featured %}
+                                                        <a href="{% url 'product_details' categor5.id %}"><img src="{{ image.image.url }}" alt="#"></a>
+                                                    {% endif %}
+
+                                                {% endfor %}
+
+                                                <div class="product-badge">
+                                                    <ul>
+                                                        <li class="sale-badge">New</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="product-hover-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'product_details' categor5.id %}" title="Quick View">
+                                                                <i class="far fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-info">
+                                                <div class="product-ratting">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                        <li><a href="#"><i class="far fa-star"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <h2 class="product-title"><a href="{% url 'product_details' categor5.id %}">{{ categor5.product_name }}</a></h2>
+{#                                                <div class="product-price">#}
+{#                                                    <span>$149.00</span>#}
+{#                                                    <del>$162.00</del>#}
+{#                                                </div>#}
+                                            </div>
+                                        </div>
+                                    </div>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <!--- end of category5 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{#    <center>#}
+{#    {% if page_obj.has_other_pages %}#}
+{#        <div class="ltn__pagination-area text-center">#}
+{#            <div class="ltn__pagination">#}
+{#                <ul>#}
+{#                    {% if page_obj.has_previous %}#}
+{#                    <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-angle-double-left"></i></a></li>#}
+{#                    {% else %}#}
+{#                    <li><i class="fas fa-angle-double-left"></i></li>#}
+{#                    {% endif %}#}
+{##}
+{#                    {% for i in page_obj.paginator.page_range %}#}
+{#                      {% if page_obj.number == i %}#}
+{#                          <li class="active"><span><a href="">{{ i }}</a><span class="sr-only">(current)</span></span></li>#}
+{#                      {% else %}#}
+{#                        <li class=""><a href="?page={{ i }}">{{ i }}</a></li>#}
+{#                      {% endif %}#}
+{#                    {% endfor %}#}
+{##}
+{#                    {% if page_obj.has_next %}#}
+{#                      <li><a href="?page={{ page_obj.next_page_number }}"><i class="fas fa-angle-double-right"></i></a></li>#}
+{#                    {% else %}#}
+{#                        <li class="disabled"><i class="fas fa-angle-double-right"></i></li>#}
+{#                    {% endif %}#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{#    {% endif %}#}
+{#    </center>#}
+    </div>
+
+
+{% endblock %}

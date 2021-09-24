@@ -1,59 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="d-flex flex-column h-100" style="background-color: #112023">
-   {% include 'header/header.html' %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-    <main class="flex-shrink-0 mt-5">
-        <div class="container marketing">
-          <div class="row featurette">
-              <div class="col-md-7 order-md-2 mt-5">
-                <h4 class="featurette-heading text-success">Product Name</h4>
-                <p class="lead text-white">{{ details.product_name }}</p>
-
-                <h4 class="featurette-heading text-success">Product Usage</h4>
-                <p class="lead text-white">{{ details.product_usage }}</p>
-
-                <h4 class="featurette-heading text-success">Contact</h4>
-                <p class="lead text-white"><b>Phone:</b> 80908980</p>
-                <p class="lead text-white"><b>Email:</b> email@gmail.com</p>
-
-              </div>
-              <div class="col-md-5 order-md-1">
-                  <div class="card">
-                      <img src="{{ details.product_image.url }}" class="" alt="..." height="400">
-                    </div>
-              </div>
-          </div>
-            <hr class="mt-4">
-            <h4 class="text-center text-success mt-4">More Product samples</h4>
+    <div class="header-bottom-area ltn__border-top ltn__header-sticky ltn__sticky-bg-black ltn__primary-bg--- section-bg-1 menu-color-white--- d-none d-lg-block">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="card">
-                      <img src="{{ details.sample1.url }}" class="card-img-top" alt="..." height="400">
+                <div class="col header-menu-column justify-content-center">
+                    <div class="sticky-logo">
+                        <div class="site-logo">
+                            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+                        </div>
                     </div>
-                </div>
+                    <div class="header-menu header-menu-2">
+                        <nav>
+                            <div class="ltn__main-menu">
+                                <ul>
+                                    <li class="menu-icon"><a href="/">Home</a></li>
+                                    <li class="menu-icon"><a href="#">About</a>
+                                        <ul>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="service.html">Services</a></li>
+                                        </ul>
+                                    </li>
 
-                <div class="col-lg-4 mb-5">
-                    <div class="card">
-                      <img src="{{ details.sample2.url }}" class="card-img-top" alt="..." height="400">
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mb-5">
-                    <div class="card">
-                      <img src="{{ details.sample3.url }}" class="card-img-top" alt="..." height="400">
+                                    <li class="menu-icon"><a href="#">Blog</a>
+                                        <ul>
+                                            <li><a href="blog.html">News</a></li>
+                                            <li><a href="blog-grid.html">News Grid</a></li>
+                                            <li><a href="blog-left-sidebar.html">News Left sidebar</a></li>
+                                            <li><a href="blog-right-sidebar.html">News Right sidebar</a></li>
+                                            <li><a href="blog-details.html">News details</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- SHOP DETAILS AREA START -->
+    <div class="ltn__shop-details-area pb-85 mt-5">
+        <div class="container mt-5">
+            <div class="row mt-5">
+                <div class="col-lg-8 col-md-12">
+                    <div class="ltn__shop-details-inner mb-60">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="ltn__shop-details-img-gallery">
+                                    <div class="ltn__shop-details-large-img">
+                                        <div class="single-large-img">
+                                             {% for detail in details.product_image.all %}
+                                               {% if detail.is_featured %}
+                                                  <a href="">
+                                                    <img src="{{detail.image.url}}" alt="Image">
+                                                  </a>
+                                               {% endif %}
+                                             {% endfor %}
+                                        </div>
+                                        {% for detail in details.product_image.all %}
+                                            <div class="single-large-img">
+                                                <a href="">
+                                                   <img src="{{ detail.image.url }}" alt="Image">
+                                                </a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="ltn__shop-details-small-img slick-arrow-2">
+                                        {% for detail in details.product_image.all %}
+                                            <div class="single-small-img">
+                                                <img src="{{detail.image.url}}" alt="Image">
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="modal-product-info shop-details-info pl-0">
+{#                                    <div class="product-ratting">#}
+{#                                        <ul>#}
+{#                                            <li><a href="#"><i class="fas fa-star"></i></a></li>#}
+{#                                            <li><a href="#"><i class="fas fa-star"></i></a></li>#}
+{#                                            <li><a href="#"><i class="fas fa-star"></i></a></li>#}
+{#                                            <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>#}
+{#                                            <li><a href="#"><i class="far fa-star"></i></a></li>#}
+{#                                        </ul>#}
+{#                                    </div>#}
+                                    <h3>{{ details.product_name}}</h3>
+                                    <div class="modal-product-meta ltn__product-details-menu-1">
+                                        <ul>
+                                            <li>
+                                                <strong class="ltn__secondary-color">Categories:</strong>
+                                                <span>
+                                                    <a href="#">{{ details.category }}</a>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="ltn__product-details-menu-2">
+                                        <ul>
+                                            <li class="ltn__secondary-color"><b>CONTACT</b></li>
+                                        </ul>
+                                        <ul>
+                                            <li><b class="ltn__secondary-color">Email:</b> maliki@gmail.com</li><br>
+                                            <li><b class="ltn__secondary-color">Phone:</b> 900909090</li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                    <div class="ltn__social-media">
+                                        <ul>
+                                            <li>Share:</li>
+                                            <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                            <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 
-</body>
-</html>
+                                        </ul>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                  <!-- Product description Tab Start -->
+                    <div class="ltn__shop-details-tab-inner ltn__shop-details-tab-inner-2">
+                        <div class="ltn__shop-details-tab-menu">
+                            <div class="nav">
+                                <a class="active">Product Description</a>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active show" id="liton_tab_details_1_1">
+                                <div class="ltn__shop-details-tab-content-inner">
+                                    <h4 class="title-2">{{ details.product_name }}</h4>
+                                    <p>{{ details.product_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  <!-- product description Tab End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SHOP DETAILS AREA END -->
+
+{% endblock %}

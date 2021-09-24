@@ -1,0 +1,335 @@
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "product_name": "Product 1",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category5"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "product_name": "T-shirt",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category1"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "product_name": "Product 3",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category4"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "product_name": "Product 4",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category3"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "product_name": "Product 35",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category2"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "product_name": "new pro",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category1"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "product_name": "new pro",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category1"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "product_name": "Product4",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category2"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "product_name": "abaca",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category3"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "product_name": "Dolip",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category3"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "product_name": "Para",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category4"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "product_name": "Produc",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category5"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "product_name": "Doli",
+    "product_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "category": "category1"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 1,
+  "fields": {
+    "product": 6,
+    "image": "ProductImage/Bedroom-wardrobe_hQGsVlp.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 2,
+  "fields": {
+    "product": 6,
+    "image": "ProductImage/cupboard_cAk948P.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 3,
+  "fields": {
+    "product": 6,
+    "image": "ProductImage/cupboard_lJ27S5W.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 4,
+  "fields": {
+    "product": 5,
+    "image": "ProductImage/Bedroom-wardrobe.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 5,
+  "fields": {
+    "product": 4,
+    "image": "ProductImage/cupboard.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 6,
+  "fields": {
+    "product": 3,
+    "image": "ProductImage/smallbed9.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 7,
+  "fields": {
+    "product": 2,
+    "image": "ProductImage/Bedroom-wardrobe_UVQye2r.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 8,
+  "fields": {
+    "product": 1,
+    "image": "ProductImage/cupboard_sZtJcHL.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 9,
+  "fields": {
+    "product": 2,
+    "image": "ProductImage/Bedroom-wardrobe_9rJiPD7.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 10,
+  "fields": {
+    "product": 2,
+    "image": "ProductImage/Bedroom-wardrobe_IQS9W1v.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 11,
+  "fields": {
+    "product": 2,
+    "image": "ProductImage/Bedroom-wardrobe_qQi1PQc.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 12,
+  "fields": {
+    "product": 2,
+    "image": "ProductImage/Bedroom-wardrobe_zJVMnG9.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 13,
+  "fields": {
+    "product": 2,
+    "image": "ProductImage/Bedroom-wardrobe_bT4am98.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 14,
+  "fields": {
+    "product": 6,
+    "image": "ProductImage/cupboard_QjuW44i.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 15,
+  "fields": {
+    "product": 5,
+    "image": "ProductImage/smallbed9_XpFlXGu.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 16,
+  "fields": {
+    "product": 5,
+    "image": "ProductImage/smallbed9_HXv3ZvX.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 17,
+  "fields": {
+    "product": 7,
+    "image": "ProductImage/cupboard_o0K5odA.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 18,
+  "fields": {
+    "product": 7,
+    "image": "ProductImage/Bedroom-wardrobe_IvY1mko.jpg",
+    "is_featured": false
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 19,
+  "fields": {
+    "product": 8,
+    "image": "ProductImage/cupboard_B40kXpW.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 20,
+  "fields": {
+    "product": 9,
+    "image": "ProductImage/smallbed9_SlAp17m.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 21,
+  "fields": {
+    "product": 10,
+    "image": "ProductImage/cupboard_R8QK0CC.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 22,
+  "fields": {
+    "product": 11,
+    "image": "ProductImage/smallbed9_gecmYll.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 23,
+  "fields": {
+    "product": 12,
+    "image": "ProductImage/Bedroom-wardrobe_nF1b6rt.jpg",
+    "is_featured": true
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 24,
+  "fields": {
+    "product": 13,
+    "image": "ProductImage/smallbed9_ZBM4zqk.jpg",
+    "is_featured": true
+  }
+}
+]
